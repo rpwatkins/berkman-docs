@@ -1,0 +1,50 @@
+---
+title: "Prerequisites"
+date: 2019-07-28T10:44:45-07:00
+draft: false
+weight: 10
+---
+
+== Prerequisites
+
+Socrates relies on these additional tools.
+
+=== Ruby and Gems
+
+Socrates requires a working Ruby installation and the following gems:
+
+* asciidoctor
+* asciidoctor-pdf
+* asciidoctor-bibliography
+* asciidoctor-diagram
+* rouge
+
+To install Ruby, MacOS and Linux users can use their OS package manager. Windows users can use the installation packages at https://rubyinstaller.org[RubyInstaller]. 
+
+{{% notice note %}} 
+Socrates has been tested with Ruby 2.5.x.
+{{% /notice %}}
+
+Once Ruby is installed, please install the above-mentioned Ruby gems as follows: 
+
+[source,console]
+----
+gem install asciidoctor asciidoctor-diagram asciidoctor-bibliography rouge
+gem install asciidoctor-pdf --pre
+----
+
+https://asciidoctor.org[Asciidoctor] and https://github.com/asciidoctor/asciidoctor-pdf[Asciidoctor-pdf] are the tools used behind the scenes by Socrates to generate an HTML or PDF file.
+
+Source highlighting is supported directly through asciidoctor when the http://rouge.jneen.net[rouge] gem is installed. See the https://asciidoctor.org/docs/user-manual/#rouge[Asciidoctor Manual] for instructions on how to enable/disable rouge support through attributes found in _master.adoc_ and how to add source blocks to an asciidoc file. Rouge is enabled by default.
+
+https://mermaidjs.github.io/#/[Mermaid] (and many other) diagram tools are supported through https://github.com/asciidoctor/asciidoctor-diagram[Asciidoctor-diagram]. 
+
+Citation and bibliography support is provided by the https://github.com/riboseinc/asciidoctor-bibliography[Asciidoctor-bibliography] tool.
+
+Please review the web sites for those tools to learn how to configure and use them. 
+
+=== Asciidoctor-fopub Support (optional)
+
+Socrates can also generate PDF files using the Asciidoctor-fopub tool-chain. See the https://github.com/asciidoctor/asciidoctor-fopub[Asciidoctor-fopub] github repository for instructions on installing the tool-chain. 
+
+Once installed, make sure the path to the _fopub_ executable is in your path environment variable so that Socrates can find the tool-chain.

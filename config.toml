@@ -1,0 +1,24 @@
+baseURL = "https://berkmandocs.netlify.com"
+languageCode = "en-us"
+title = "Berkman Documentation"
+author = "Rod Watkins"
+
+
+# Change the default theme to be use when building the site with Hugo
+theme = "hugo-theme-learn"
+
+# For search functionality
+[outputs]
+home = [ "HTML", "RSS", "JSON"]
+
+[params]
+themeVariant = "blue"
+
+[[menu.shortcuts]] 
+name = "<i class='fab fa-github'></i> Github Repo"
+identifier = "ds"
+url = "https://github.com/rpwatkins/berkman"
+weight = 10
+
+
+
